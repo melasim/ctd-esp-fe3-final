@@ -43,9 +43,9 @@ const initialApiState = {dentistList: [], dentistDetail: {}}
 const apiReducer = (state, action) => {
     switch(action.type){
         case 'DENTIST LIST':
-            return {dentistList: action.payload, dentistDetail: state.pokeDetail}
+            return {dentistList: action.payload, dentistDetail: state.dentistDetail}
         case 'DENTIST':
-            return {dentistDetail: action.payload, dentistList: state.pokeList}
+            return {dentistDetail: action.payload, dentistList: state.dentistList}
         default:
             throw new Error
     }
